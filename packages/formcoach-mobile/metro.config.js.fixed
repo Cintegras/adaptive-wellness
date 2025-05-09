@@ -1,0 +1,36 @@
+// Learn more https://docs.expo.io/guides/customizing-metro
+const path = require('path');
+
+// Create a custom config without relying on @expo/metro-config
+const config = {
+  resolver: {
+    sourceExts: ['js', 'jsx', 'json', 'ts', 'tsx'],
+    assetExts: ['bmp', 'gif', 'jpg', 'jpeg', 'png', 'psd', 'svg', 'webp', 'ttf'],
+    nodeModulesPaths: [path.resolve(__dirname, 'node_modules')],
+    disableHierarchicalLookup: true, // Prevent looking up modules in parent directories
+    // Ensure we only use our own node_modules
+    extraNodeModules: {
+      // Add any specific module overrides here if needed
+    },
+  },
+  transformer: {
+    babelTransformerPath: require.resolve('metro-react-native-babel-transformer'),
+    assetRegistryPath: 'react-native/Libraries/Image/AssetRegistry',
+  },
+  serializer: {
+    // Provide a minimal serializer configuration
+    getModulesRunBeforeMainModule: () => [],
+    getPolyfills: () => [],
+  },
+  server: {
+    port: 8081,
+  },
+  // Add project root
+  projectRoot: path.resolve(__dirname),
+  watchFolders: [path.resolve(__dirname)],
+  // Explicitly exclude the parent directory to prevent Metro from looking there
+  blockList: [new RegExp(path.resolve(__dirname, '..', 'node_modules'))],
+};
+
+// Export the configuration
+module.exports = config;
