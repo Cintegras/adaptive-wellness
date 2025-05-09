@@ -1,0 +1,6 @@
+{
+  "npmScope": "adaptive-wellness",
+  "affected": {
+    "defaultBase": "main"
+  }
+}

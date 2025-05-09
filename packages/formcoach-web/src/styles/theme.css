@@ -1,0 +1,65 @@
+:root {
+  /* Color tokens */
+  --fc-color-bg-app: #020D0C;
+  --fc-color-bg-card: #1C1C1E;
+  --fc-color-bg-highlight: rgba(176, 232, 227, 0.12);
+  --fc-color-bg-hover: #2D2D2F;
+  
+  --fc-color-text-primary: #A4B1B7;
+  --fc-color-text-accent: #00C4B4;
+  
+  --fc-color-border-default: #2C2C2E;
+  --fc-color-border-focus: #00C4B4;
+  
+  /* Status colors */
+  --fc-color-status-success: #4ADE80;
+  --fc-color-status-warning: #FACC15;
+  --fc-color-status-alert: #FB923C;
+  --fc-color-status-error: #F87171;
+  
+  /* Typography */
+  --fc-font-size-heading: 32px;
+  --fc-font-size-subheading: 20px;
+  --fc-font-size-body: 16px;
+  --fc-font-size-small: 14px;
+  --fc-font-size-xs: 12px;
+  
+  --fc-font-weight-regular: 400;
+  --fc-font-weight-medium: 500;
+  --fc-font-weight-semibold: 600;
+  --fc-font-weight-bold: 700;
+  
+  --fc-font-family-sans: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --fc-spacing-xs: 0.5rem;
+  --fc-spacing-sm: 1rem;
+  --fc-spacing-md: 1.5rem;
+  --fc-spacing-lg: 2rem;
+  --fc-spacing-xl: 3rem;
+  
+  /* Border Radius */
+  --fc-radius-sm: 0.25rem;
+  --fc-radius-md: 0.5rem;
+  --fc-radius-lg: 0.75rem;
+  --fc-radius-full: 9999px;
+}
+
+/* Theme variants */
+[data-theme='light'] {
+  --fc-color-bg-app: #F9F9F9;
+  --fc-color-bg-card: #FFFFFF;
+  --fc-color-bg-highlight: rgba(0, 196, 180, 0.12);
+  --fc-color-text-primary: #333333;
+  --fc-color-border-default: #E5E5E5;
+  /* other overrides... */
+}
+
+[data-theme='high-contrast'] {
+  --fc-color-bg-app: #000000;
+  --fc-color-bg-card: #121212;
+  --fc-color-text-primary: #FFFFFF;
+  --fc-color-text-accent: #00E5D2;
+  --fc-color-border-default: #444444;
+  /* other overrides... */
+}

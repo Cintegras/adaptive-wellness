@@ -1,0 +1,81 @@
+@layer utilities {
+  /* Typography utilities */
+  .fc-heading {
+    @apply font-[var(--fc-font-weight-bold)] text-[var(--fc-color-text-primary)] text-[var(--fc-font-size-heading)];
+  }
+  
+  .fc-subheading {
+    @apply font-[var(--fc-font-weight-semibold)] text-[var(--fc-color-text-primary)] text-[var(--fc-font-size-subheading)];
+  }
+  
+  .fc-text {
+    @apply text-[var(--fc-color-text-primary)] text-[var(--fc-font-size-body)];
+  }
+  
+  .fc-text-small {
+    @apply text-[var(--fc-color-text-primary)] text-[var(--fc-font-size-small)];
+  }
+  
+  /* Card utilities */
+  .fc-card {
+    @apply bg-[var(--fc-color-bg-card)] border border-[var(--fc-color-border-default)] rounded-[var(--fc-radius-md)];
+  }
+  
+  .fc-highlight-card {
+    @apply rounded-[var(--fc-radius-md)] p-6 bg-[var(--fc-color-bg-highlight)];
+  }
+  
+  /* Button utilities */
+  .fc-button-primary {
+    @apply bg-[var(--fc-color-text-accent)] text-[var(--fc-color-bg-app)] 
+           font-[var(--fc-font-weight-semibold)] rounded-[var(--fc-radius-md)]
+           px-4 py-2 transition-all hover:opacity-90 focus:ring-2 
+           focus:ring-[var(--fc-color-border-focus)] focus:ring-offset-2;
+  }
+  
+  .fc-button-secondary {
+    @apply bg-transparent border border-[var(--fc-color-border-default)] 
+           text-[var(--fc-color-text-primary)] rounded-[var(--fc-radius-md)]
+           px-4 py-2 transition-all hover:bg-[var(--fc-color-bg-hover)];
+  }
+  
+  /* Form utilities */
+  .fc-input {
+    @apply bg-[var(--fc-color-bg-card)] border border-[var(--fc-color-border-default)] 
+           text-[var(--fc-color-text-primary)] rounded-[var(--fc-radius-md)]
+           px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--fc-color-border-focus)];
+  }
+  
+  .fc-input-label {
+    @apply text-[var(--fc-color-text-primary)] text-[var(--fc-font-size-small)]
+           font-[var(--fc-font-weight-medium)] mb-1 block;
+  }
+  
+  .fc-form-error {
+    @apply text-[var(--fc-color-status-error)] text-[var(--fc-font-size-small)]
+           mt-1 flex items-center gap-1;
+  }
+  
+  /* Icon utilities */
+  .fc-icon {
+    @apply text-[var(--fc-color-text-accent)];
+  }
+  
+  /* Layout utilities */
+  .fc-container {
+    @apply max-w-screen-lg mx-auto px-4;
+  }
+  
+  .fc-section {
+    @apply py-[var(--fc-spacing-md)];
+  }
+  
+  /* Effects utilities */
+  .fc-glow {
+    @apply shadow-[0_0_12px_var(--fc-color-text-accent)];
+  }
+  
+  .fc-focus {
+    @apply outline-2 outline-[var(--fc-color-text-accent)] outline-offset-2;
+  }
+}
